@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <p text-center>Inciar Sesion</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+<ion-item> 
+  <ion-input type="text" [(ngModel)]="user.email" value="Email" placeholder="Email"></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-input type="password" [(ngModel)]="user.password" value="password" placeholder="Contraseña"></ion-input>
+</ion-item>
+<br><p text-right><ion-label expand="full" color="success" routerLink="/forgotpassword"><b>¿Olvidaste la contraseña?</b></ion-label></p>
+<br>
+  <p text-center><button class="button button-small button-assertive"><ion-button expand="full" color="success" (click)="onLogin()">Iniciar Sesion</ion-button></button></p>
+</ion-content>
+
+<div style="width:400px;margin:auto;">
+    <div class="linea">&nbsp;</div>
+    <div class="leyenda">O</div>
+    <div class="linea">&nbsp;</div>
+  </div>
+<p text-center>¿No tienes una cuenta? <ion-label expand="full" color="success" (click)="registerModal()" routerLink="/register"><b>Registrarse</b></ion-label>

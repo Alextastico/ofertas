@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon">
+        </ion-back-button>
+        <ion-label>Atras</ion-label>
+      </ion-buttons>
+      <ion-title>
+          <p text-center>Registrarse</p>
+        </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding> 
+<ion-item> 
+  <ion-input type="text" [(ngModel)]="user.email" value="Email" placeholder="Email"></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-input type="password" [(ngModel)]="user.password" value="password" placeholder="Contraseña"></ion-input>
+</ion-item>
+<p text-center><button class="button button-small button-assertive"><ion-button expand="full" color="success" (click)="onRegister()">Crear cuenta</ion-button></button>
+</ion-content>
+
+  
